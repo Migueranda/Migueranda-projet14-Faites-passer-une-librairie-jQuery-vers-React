@@ -1,10 +1,5 @@
 import React from "react";
 import "../../Utils/TestModal.css"
-// import "./Modal.css";
-// import { useState } from "react";
-// import "../../Utils/Modal.css"
-// import { Link } from "react-router-dom";
-
 
 function TestModal(props){
 
@@ -14,7 +9,6 @@ function TestModal(props){
     const closeModal = _ => {
         handleChange(false)
     }
-
     return (
        <div>
             {

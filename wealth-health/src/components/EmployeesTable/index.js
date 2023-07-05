@@ -94,7 +94,6 @@ function Filter(){  // Plugin pour les tables de données
         <h1 className="current-employees">Current Employees</h1>
         <div className="conatiner-input-filter-reset-button"> 
           <div className="container-button-reset-data">
-            {/* <button className="button-res" onClick={handleReset}>Reset Data</button>        */}
           </div>          
           <input
               type="text"

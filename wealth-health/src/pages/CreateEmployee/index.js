@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect} from "react";
-// import Address from "../../components/Address";
 import City from "../../components/City";
 import DatePickerBirth from "../../components/DatePickerBirth";
 import DatePickerStartDate from "../../components/DatePickerStartDate";
@@ -77,14 +76,10 @@ function CreateEmployee(){
                     <LastName/>
                     <DatePickerStartDate />
                     <DatePickerBirth/>                   
-                    {/* <fieldset className="address"> */}
-                    {/* <legend>Address */}
                         <Street />
                         <City />
                         <SelectState/>                       
                         <ZipCode />
-                    {/* </legend> */}
-                    {/* </fieldset> */}
                     <SelectDepartement/>
                     <div className="App">
                         <button

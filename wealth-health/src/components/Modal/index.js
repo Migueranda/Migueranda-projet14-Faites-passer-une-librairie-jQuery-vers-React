@@ -1,5 +1,4 @@
 import React from "react";
-// import "./Modal.css";
 import "../../Utils/Modal.css"
 import { Link } from "react-router-dom";
 
@@ -17,10 +16,8 @@ function Modal({setOpenModal }){
                     </button>
                 </div>
                 <div className="title">
-                    {/* <h1>Are You Sure You Want to Continue?</h1> */}
                 </div>
                 <div className="body">
-                    {/* <p>The next page looks amazing. Hope you want to go there!</p> */}
                     <p>Employee created!</p>
                 </div>
                 <div className="footer">
@@ -31,14 +28,9 @@ function Modal({setOpenModal }){
                         id="cancelBtn"
                     >                        
                         <Link to='/CreateEmployee'>create new employee</Link> 
-                        {/* <p>create new employee</p> */}
                     </button>
-                    <button
-                       
-                    >
+                    <button>                     
                         <Link to='/EmployeeList'>See new employee</Link> 
-                        {/* <p>See new employee</p> */}
-                        
                     </button>
                 </div>
             </div>

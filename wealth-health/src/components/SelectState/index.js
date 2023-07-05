@@ -87,8 +87,7 @@ function SelectState(){
         onChange={setSelectedOption}
         options={options}
         name='selectionState' // afin d'avoir tout le temps un champ input même sans valeur selectionnée
-        // className="input-text"
-        
+   
       />
        {(err_state) ? <p className="form-error-message"> State field must not be empty </p>:<p></p>} 
     </div>
