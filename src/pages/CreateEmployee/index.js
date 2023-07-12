@@ -13,7 +13,7 @@ import 'react-modal-package-npm/dist/index.css';
 import FirstName from "../../components/firstName";
 import LastName from "../../components/LastName";
 import '../../styles/CreateEmployee.css'
-import Street from "../../components/Address";
+import Street from "../../components/Street";
 
 function CreateEmployee(){ 
     const dispatch = useDispatch()
@@ -76,10 +76,10 @@ function CreateEmployee(){
                     <LastName/>
                     <DatePickerStartDate />
                     <DatePickerBirth/>                   
-                        <Street />
-                        <City />
-                        <SelectState/>                       
-                        <ZipCode />
+                    <Street />
+                    <City />
+                    <SelectState/>                       
+                    <ZipCode />
                     <SelectDepartement/>
                     <div className="App">
                         <button

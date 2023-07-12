@@ -1,5 +1,5 @@
 import React from 'react';
-import Employeestable from '../../components/EmployeesTable';
+import Employeestable from '../../components/DataTable';
 import { useDispatch } from "react-redux";
 import { setInit } from "../../store/redux";
 
@@ -16,8 +16,3 @@ function EmployeeList() {
   
 }
 export default EmployeeList
-
-
-
-
-

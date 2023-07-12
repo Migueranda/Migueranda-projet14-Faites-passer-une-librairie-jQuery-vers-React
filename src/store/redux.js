@@ -2,7 +2,7 @@ import { createSlice, configureStore, combineReducers } from "@reduxjs/toolkit";
 import storage from 'redux-persist/lib/storage';
 import { persistReducer, persistStore } from "redux-persist";
 import thunk from 'redux-thunk';
-import logger from 'redux-logger'
+import logger from 'redux-logger';
 
 
 // état initial qui permet la façon dont s'affichage l'employé crée dans la table
@@ -22,9 +22,7 @@ const employeesSlice = createSlice({
         addEmployee: (state, action) => {            
             state.employeeList.push(action.payload) ;             
         }
-    },
-    // middleware: [thunk]
-    
+    },    
 });
 
 const initialStateFormValidation = {

@@ -3,15 +3,17 @@ import { useTable, usePagination, useGlobalFilter, useSortBy } from "react-table
 import { Link } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import '../../styles/EmployeesTable.css';
+import { useMemo, useEffect, useState} from "react";
+
 
 function Filter(){  // Plugin pour les tables de données
     const employeeList = useSelector((state) => state.employees.employeeList)
-    const data = React.useMemo(
+    const data = useMemo(
       () => employeeList,
       []
     )
     console.log(employeeList)
-    const columns = React.useMemo(
+    const columns = useMemo(
         () => [
           {
             Header: 'First Name ',           
@@ -84,7 +86,7 @@ function Filter(){  // Plugin pour les tables de données
         state: { pageIndex, pageSize, globalFilter }
     } = props;
 
-    React.useEffect(() => {
+    useEffect(() => {
     }, [globalFilter]);
 
     const firstPageRows = rows.slice(0, 20)
@@ -194,7 +196,7 @@ function Filter(){  // Plugin pour les tables de données
         </>
     );
     }
-    const [setData] = React.useState();    
+    const [setData] = useState();    
     const handleReset = () => {
     setData(data);
     };

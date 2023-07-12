@@ -1,31 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React, { StrictMode, lazy } from 'react';
+import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App';
-import EmployeeList from './pages/EmployeeList';
 import {store} from './store/redux';
-
 import {
   BrowserRouter,
   Routes,
   Route
 } from "react-router-dom";
-import CreateEmployee from './pages/CreateEmployee';
 import { Provider } from 'react-redux';
+const EmployeeList = lazy(() => import("./pages/EmployeeList"));
+const CreateEmployee = lazy(() => import("./pages/CreateEmployee"));
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <StrictMode>
     <BrowserRouter>
       <Provider store={store}>
           <Routes>   
             <Route>            
-              <Route path='/' element={<App /> } />
-              <Route path='/CreateEmployee' element={<CreateEmployee/>} />
-              <Route path='/EmployeeList' element={<EmployeeList/>} />       
+              <Route path='/' element={<App /> } /> 
+              <Route path='/CreateEmployee' element={ <React.Suspense fallback={<>...Loading</>}> <CreateEmployee/></React.Suspense> } />
+              <Route path='/EmployeeList' element={ <React.Suspense fallback={<>...Loading</>}><EmployeeList/></React.Suspense>} />       
             </Route>
           </Routes>
       </Provider>
     </BrowserRouter>
-  </React.StrictMode>
+  </StrictMode>
 );
