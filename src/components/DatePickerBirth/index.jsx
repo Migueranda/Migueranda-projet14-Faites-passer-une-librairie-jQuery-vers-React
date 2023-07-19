@@ -5,9 +5,7 @@ import '../../styles/CreateEmployee.css';
 
 function DatePickerBirth(){
     //Plugin de sélection de date
-    const [BirthDate, SetBirthDate] = useState(new Date());
-
-    
+    const [BirthDate, SetBirthDate] = useState(new Date());    
   
     return(
         <div>

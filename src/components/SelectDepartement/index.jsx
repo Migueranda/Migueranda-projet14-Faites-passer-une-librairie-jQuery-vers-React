@@ -18,7 +18,7 @@ function SelectDepartement(){
     const [selectedOption, setSelectedOption] = useState(null);
     
 
-    useEffect(()=>{
+   useEffect (()=>{
       // Si formulaire validé
       if(form_validation === 'NONE'){
           // Reset valeur selectionné dans react-select

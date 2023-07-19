@@ -12,7 +12,6 @@ function Filter(){  // Plugin pour les tables de données
       () => employeeList,
       []
     )
-    console.log(employeeList)
     const columns = useMemo(
         () => [
           {
@@ -57,37 +56,37 @@ function Filter(){  // Plugin pour les tables de données
 
     // table component
     function Table({ columns, data }) {
-    const props = useTable(
-        {
-        columns,
-        data
-        },
-        useGlobalFilter, 
-        useSortBy,
-        usePagination
-    );
-    const {
-        getTableProps,
-        getTableBodyProps,
-        headerGroups,
-        rows,
-        prepareRow,
-        setGlobalFilter,
-        state,
-        page, 
-        canPreviousPage,
-        canNextPage,
-        pageOptions,
-        pageCount,
-        gotoPage,
-        nextPage,
-        previousPage,
-        setPageSize,
-        state: { pageIndex, pageSize, globalFilter }
-    } = props;
+      const props = useTable(
+          {
+          columns,
+          data
+          },
+          useGlobalFilter, 
+          useSortBy,
+          usePagination
+      );
+      const {
+          getTableProps,
+          getTableBodyProps,
+          headerGroups,
+          rows,
+          prepareRow,
+          setGlobalFilter,
+          state,
+          page, 
+          canPreviousPage,
+          canNextPage,
+          pageOptions,
+          pageCount,
+          gotoPage,
+          nextPage,
+          previousPage,
+          setPageSize,
+          state: { pageIndex, pageSize, globalFilter }
+      } = props;
 
-    useEffect(() => {
-    }, [globalFilter]);
+      useEffect(() => {
+      }, [globalFilter]);
 
     const firstPageRows = rows.slice(0, 20)
 
@@ -196,10 +195,6 @@ function Filter(){  // Plugin pour les tables de données
         </>
     );
     }
-    const [setData] = useState();    
-    const handleReset = () => {
-    setData(data);
-    };
 
     return (   
       <div className="container">       
